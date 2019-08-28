@@ -1,3 +1,7 @@
-<svg>
-  <rect id="background" />
+<svg fill="#000000">
+  <text id="myClock" x="50%" y="50%+15"
+      font-size="75" text-anchor="middle" text-length="20" fill="deepskyblue">
+        00:00:00
+  </text>
 </svg>
+
