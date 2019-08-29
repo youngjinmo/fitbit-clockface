@@ -11,7 +11,15 @@
   fill: black;
 }
 
-#time {
-  font-size: "80";
-  font-family: 'SevilleSharp-Regular';
+#myClock {
+  font-size: "100";
+  font-family: Colfax-Black;
+}
+
+#arc-steps-back {
+  opacity: 0.3;
+}
+
+#arc-exercise-back {
+  opacity: 0.3;
 }
