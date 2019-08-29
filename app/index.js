@@ -11,18 +11,61 @@ let steps = document.getElementById("steps");
 let arc_steps = document.getElementById("arc-steps-fore");
 let arc_distance = document.getElementById("arc-distance-fore");
 
+let month_txt = document.getElementById("date-month");
+let day_txt = document.getElementById("date-date");
 
 
 steps.text = today.local.steps || 0;
 setInterval(() => {
     steps.text = today.local.steps || 0;
-}, 1500);
+}, 4500);
 
 setInterval(() => {
     let angle_steps_per = (today.local.steps || 0) / (goals.steps || 0);
     let angle = 360 * angle_steps_per;
     arc_steps.sweepangle = angle; 
-}, 1500);
+}, 4500);
+
+
+// Convert day of month to human readable
+function nameOfMonth(i) {
+    switch(i) {
+    case 0:
+        return "JAN";
+    case 1:
+        return "FEB";
+    case 2:
+        return "MAR";
+    case 3:
+        return "APR";
+    case 4:
+        return "MAY";
+    case 5:
+        return "JUN";
+    case 6:
+        return "JUL";
+    case 7:
+        return "AUG";
+    case 8:
+        return "SEP";
+    case 9:
+        return "OCT";
+    case 10:
+        return "NOV";
+    case 11:
+        return "DEC";
+    }
+}
+
+
+
+let date = new Date();
+let month = nameOfMonth(date.getMonth());
+let day = date.getDate();
+month_txt.text = `${month}`;
+day_txt.text = `${day}`;
+
+
 
 clock.granularity = "seconds";
 clock.ontick = (evt) => {
@@ -53,6 +96,7 @@ clock.ontick = (evt) => {
  
     myClock.text = `${hours}:${minutes}`;
     myClock_sec.text = `${seconds}`;
+
 
     console.log(evt.date.toString());
     console.log(hours+":"+minutes+":"+seconds);
