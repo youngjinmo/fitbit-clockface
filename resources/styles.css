@@ -12,7 +12,12 @@
 }
 
 #myClock {
-  font-size: "100";
+  font-size: "150";
+  font-family: Colfax-Black;
+}
+#myClock-sec {
+  fill: white;
+  font-size: "10";
   font-family: Colfax-Black;
 }
 
@@ -20,6 +25,18 @@
   opacity: 0.3;
 }
 
-#arc-exercise-back {
+#arc-distance-back {
   opacity: 0.3;
+}
+
+#date-month {
+  fill: #FFDEAD;
+  font-family: Colfax-Black;
+  font-size: 60;
+}
+
+#date-date {
+  fill: #FFDEAD;
+  font-family: Colfax-Black;
+  font-size: 55;
 }

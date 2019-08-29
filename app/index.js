@@ -5,11 +5,24 @@ import { today, goals } from "user-activity";
 
 
 let myClock = document.getElementById("myClock");
+let myClock_sec = document.getElementById("myClock-sec");
+let ampm = document.getElementById("ampm");
 let steps = document.getElementById("steps");
+let arc_steps = document.getElementById("arc-steps-fore");
+let arc_distance = document.getElementById("arc-distance-fore");
+
 
 
 steps.text = today.local.steps || 0;
+setInterval(() => {
+    steps.text = today.local.steps || 0;
+}, 1500);
 
+setInterval(() => {
+    let angle_steps_per = (today.local.steps || 0) / (goals.steps || 0);
+    let angle = 360 * angle_steps_per;
+    arc_steps.sweepangle = angle; 
+}, 1500);
 
 clock.granularity = "seconds";
 clock.ontick = (evt) => {
@@ -20,14 +33,17 @@ clock.ontick = (evt) => {
 
 
     // AM/PM 12시간 나누기
-    if(hours>12){
-        hours = hours - 12;
+    if(hours>11){
+        ampm.text = "P";
+        if(hours>12){
+            hours = hours - 12;
+        }
     }
 
     // 시간 카운트가 한 자리수일 때 앞에 0 추가
-    // if(hours<10){
-    //     hours = "0"+hours;
-    // }
+    if(hours<10){
+        hours = "0"+hours;
+    }
     if(minutes<10) {
         minutes = "0"+minutes;
     }
@@ -35,9 +51,11 @@ clock.ontick = (evt) => {
         seconds = "0"+seconds;
     }
  
-    myClock.text = `${hours}:${minutes}:${seconds}`;
+    myClock.text = `${hours}:${minutes}`;
+    myClock_sec.text = `${seconds}`;
 
     console.log(evt.date.toString());
     console.log(hours+":"+minutes+":"+seconds);
+
 }
 

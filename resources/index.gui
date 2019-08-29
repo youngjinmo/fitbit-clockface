@@ -1,29 +1,41 @@
 <svg viewport-fill="#000000">
-  <!-- 시간 -->
-  <text id="myClock" x="50%" y="25%"
-      font-size="50" text-anchor="middle" text-length="20" fill="deepskyblue">
-        00:00:00
+  
+  <text id="ampm" x="9%" y="18%" text-anchor="middle" text-length="5" fill="deepskyblue">
+    A
+  </text> 
+  <text x="9%" y="26%" text-anchor="middle" text-length="5" fill="deepskyblue">
+    M
+  </text> 
+
+  <!-- Clock -->
+  <text id="myClock" x="45%" y="25%"
+      font-size="60" text-anchor="middle" text-length="20" fill="deepskyblue">
+        00:00
+  </text>
+  <text id="myClock-sec" x="90%" y="43%"
+      font-size="60" text-anchor="end" text-length="20">
+        00
   </text>
 
+  <!-- Date -->
+  <text id="date-month" x="100%-70" y="100%-75" text-anchor="middle" text-length="15">
+    Aug
+  </text> 
+  <text id="date-date" x="100%-70" y="100%-30" text-anchor="middle" text-length="15">
+    29
+  </text> 
+
   <!-- Activity  -->
-  <arc x="10%" y="60%" width="100" height="100" fill="coral" arc-width="10" 
-    start-angle="0" sweep-angle="120" id="arc-steps-fore"/>
-  <arc x="10%" y="60%" width="100" height="100" fill="coral" arc-width="10" 
+  <arc x="10%" y="60%" width="100" fill= "#F08080" height="100" arc-width="10" 
+    start-angle="0" id="arc-steps-fore"/>
+  <arc x="10%" y="60%" width="100" fill= "#F08080" height="100" arc-width="10" 
     start-angle="0" sweep-angle="360" id="arc-steps-back"/>
 
-  <arc x="60%" y="60%" width="100" height="100" fill="red" arc-width="10" 
-    start-angle="0" sweep-angle="290" id="arc-exercise-fore"/>
-  <arc x="60%" y="60%" width="100" height="100" fill="red" arc-width="10" 
-    start-angle="0" sweep-angle="360" id="arc-exercise-back"/>
 
   <text x="10%+50" y="100%-60" text-anchor="middle" fill="deepskyblue" 
     font-family="Tungsten-Medium" text-length="6" id="steps">
     0,000
   </text>
 
-  <text x="60%+50" y="100%-60" text-anchor="middle" fill="deepskyblue" 
-    font-family="Tungsten-Medium">
-    1/3
-  </text> 
 </svg>
 
