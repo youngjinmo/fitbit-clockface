@@ -1,41 +1,51 @@
-<svg viewport-fill="#000000">
-  
-  <text id="ampm" x="9%" y="18%" text-anchor="middle" text-length="5" fill="deepskyblue">
-    A
-  </text> 
-  <text x="9%" y="26%" text-anchor="middle" text-length="5" fill="deepskyblue">
-    M
-  </text> 
+<svg viewport-fill="#000000" text-length="30">
 
-  <!-- Clock -->
-  <text id="myClock" x="45%" y="25%"
-      font-size="60" text-anchor="middle" text-length="20" fill="deepskyblue">
-        00:00
-  </text>
-  <text id="myClock-sec" x="90%" y="43%"
-      font-size="60" text-anchor="end" text-length="20">
-        00
-  </text>
 
   <!-- Date -->
-  <text id="date-month" x="100%-70" y="100%-75" text-anchor="middle" text-length="15">
+  <text id="month" x="20%" y="25-30%" text-anchor="middle" text-length="5">
     Aug
+  </text>
+  <text id="date" x="20%" y="25%+10" text-anchor="middle" text-length="5">
+    20
+  </text>
+  
+  <!-- Day  -->
+  <text id="day" x="75%" y="25%" text-anchor="middle" text-length="5">
+    Mon
+  </text>
+
+
+  <!-- Clock: hours and minutes -->
+  <text id="myClock" x="20%" y="50%" text-anchor="middle" text-length="20" >
+        00:00
+  </text>
+
+  <!-- AMPM and seconds -->
+  <text id="ampm" x="9%" y="30%+10" text-anchor="middle" text-length="5" >
+    AM
   </text> 
-  <text id="date-date" x="100%-70" y="100%-30" text-anchor="middle" text-length="15">
-    21
+  <text id="seconds"x="9%" y="30%+10%" text-anchor="middle" text-length="5">
+    :00
   </text> 
+
 
   <!-- Activity  -->
-  <arc x="10%" y="60%" width="100" fill= "#F08080" height="100" arc-width="10" 
-    start-angle="0" id="arc-steps-fore"/>
-  <arc x="10%" y="60%" width="100" fill= "#F08080" height="100" arc-width="10" 
-    start-angle="0" sweep-angle="360" id="arc-steps-back"/>
 
+  <!-- steps arc -->
+  <arc id="arc-steps-fore" x="10%" y="60%" width="100" height="100" arc-width="10" 
+    start-angle="0" />
+  <arc id="arc-steps-back" x="10%" y="60%" width="100" height="100" arc-width="10" 
+    start-angle="0" sweep-angle="360" />
 
-  <text x="10%+50" y="100%-60" text-anchor="middle" fill="deepskyblue" 
-    font-family="Tungsten-Medium" text-length="6" id="steps">
+  <!-- steps text -->
+  <text id="steps" x="10%+50" y="100%-60" text-anchor="middle" text-length="6">
     0,000
   </text>
+
+
+  <!-- heart rate image -->
+
+  <!-- heart rate text -->
 
 </svg>
 

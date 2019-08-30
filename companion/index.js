@@ -1,1 +1,1 @@
-console.log('Hello world!');
+console.log('This clock face made by DevAndy.');
