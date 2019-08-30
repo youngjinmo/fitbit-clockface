@@ -13,17 +13,17 @@
 #month {
   fill: #fac965;
   font-family: Colfax-Black;
-  font-size: '50px';
+  font-size: 40;
 }
 
 #date {
   fill: #fac965;
   font-family: Colfax-Black;
-  font-size: 50;
+  font-size: 40;
 }
 
 #day {
-  fill: #fac9c9;
+  fill:	#fd6667;
   font-family: Colfax-Black;
   font-size: 60;
 }
@@ -46,19 +46,23 @@
   font-size: 40;
   font-family: Colfax-Black;
 }
+#arc-fore {
+  fill: #53d52a;
+}
 
-#arc-steps-back {
-  fill: #F08080;
+#arc-back {
+  fill: #53d52a;
   opacity: 0.3;
 }
 
-#arc-hr-back {
-  fill: #F08080;
-  opacity: 0.3;
-}
-
-#steps {
+#stats_steps {
   fill: deepskyblue;
-  font-family: Tungsten-Medium;
+  font-family: SevilleSharp-Book;
+  font-size: 27;
+}
+
+#stats_hr {
+  fill: deepskyblue;
+  font-family: SevilleSharp-Book;
   font-size: 27;
 }

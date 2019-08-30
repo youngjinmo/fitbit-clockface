@@ -2,9 +2,9 @@ import document from "document";
 import clock from "clock";
 import { preferences } from "user-settings";
 import { today, goals } from "user-activity";
+import { HeartRateSensor } from "heart-rate";
 
-
-let month_txt = document.getElementById("mnonth");
+let month_txt = document.getElementById("month");
 let date_txt = document.getElementById("date");
 let day_txt = document.getElementById("day");
 
@@ -12,10 +12,14 @@ let myClock = document.getElementById("myClock");
 let ampm = document.getElementById("ampm");
 let myClock_seconds = document.getElementById("seconds");
 
-let arc_steps = document.getElementById("arc-steps-fore");
-let steps = document.getElementById("steps");
+let arc = document.getElementById("arc-fore");
+let steps = document.getElementById("stats_steps");
+let hr = document.getElementById("stats_hr");
 
-// convert to String for human
+
+// utils
+
+// Convert day of month to human readable
 function nameOfMonth(i) {
     switch(i) {
         case 0:
@@ -45,6 +49,7 @@ function nameOfMonth(i) {
     }
 }
 
+// Convert day of week to human readable
 function nameOfWeek(i) {
     switch(i) {
         case 0:
@@ -64,22 +69,17 @@ function nameOfWeek(i) {
     }
 }
 
+
 // import date data
 let date = new Date();
 let month = nameOfMonth(date.getMonth());
-let date = date.getDate();
+let date_day = date.getDate();
 let day = nameOfWeek(date.getDay());
 
 
-// import date data
-// let date = new Date();
-// let month = nameOfMonth(date.getMonth());
-// let date = date.getDate();
-// let day = nameOfMonth(date.getDay());
-
 // text data convert to data data imported
 month_txt.text = `${month}`;
-date_txt.text = `${date}`;
+date_txt.text = `${date_day}`;
 day_txt.text = `${day}`;
 
 
@@ -114,22 +114,33 @@ clock.ontick = (evt) => {
     myClock_seconds.text = `:${seconds}`;
 
 
-    // Activity Text
-    steps.text = today.local.steps.toString();
-    setInterval(() => {
-        steps.text = today.local.steps.toString();
-    }, 4500);
+    // Activity - steps
+    function activity_steps() {
+        steps.text = today.local.steps || 0;
+        let goalCompletion = (today.local.steps)||0 / (goals.steps)||0;
+        let angle = 360 * goalCompletion;
+        arc.sweepangle = angle;
+    }
+    activity_steps();
 
-    // Activity Circle
-    let goalCompletion = (today.local.steps) / (goals.steps);
-    setInterval(() => {
-        goalCompletion = (today.local.steps) / (goals.steps);
-        arc_steps.sweepangle = 360 * goalCompletion;
-    }, 4500);
+    setInterval(activity_steps, 3000);
 
 
-    console.log(evt.date.toString());
-    console.log(hours+":"+minutes+":"+seconds);
+    if(HeartRateSensor) {
+        // console.log("This device has a HR sensor");
+        const hrm = new HeartRateSensor();
+        hrm.addEventListener("reading", () => {
+            // console.log(`current heart-rate: ${hrm.heartRate}`);
+            hr.text = `${hrm.heartRate}`;
+        });
+        hrm.start();
+    } else {
+    	console.log("This device has a no HR sensor");
+    }
+
+    
+    // console.log(evt.date.toString());
+    // console.log(hours+":"+minutes+":"+seconds);
 
 }
 
