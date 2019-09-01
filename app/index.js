@@ -119,7 +119,7 @@ clock.ontick = (evt) => {
         steps.text = today.local.steps || 0;
         let goalCompletion = (today.local.steps)||0 / (goals.steps)||0;
         let angle = 360 * goalCompletion;
-        arc.sweepangle = angle;
+        arc.sweepAngle = angle;
     }
     activity_steps();
 
