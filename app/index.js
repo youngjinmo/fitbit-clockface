@@ -115,14 +115,16 @@ clock.ontick = (evt) => {
 
 
     // Activity - steps
+    let today_steps = today.local.steps || 0;
+    let today_goals = (goals.steps) || 0;
+
+    steps.text = today_steps;  // steps 출력
+    
     function activity_steps() {
-        steps.text = today.local.steps || 0;
-        let goalCompletion = (today.local.steps)||0 / (goals.steps)||0;
+        let goalCompletion = today_steps / today_goals;
         let angle = 360 * goalCompletion;
         arc.sweepAngle = angle;
     }
-    activity_steps();
-
     setInterval(activity_steps, 3000);
 
 
@@ -137,8 +139,8 @@ clock.ontick = (evt) => {
     } else {
     	console.log("This device has a no HR sensor");
     }
-
     
+
     // console.log(evt.date.toString());
     // console.log(hours+":"+minutes+":"+seconds);
 
