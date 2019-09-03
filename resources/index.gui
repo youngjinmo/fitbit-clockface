@@ -22,7 +22,7 @@
 
     <rect class="box">
       <!-- Clock: hours and minutes -->
-      <text id="myClock" x="35%+5" y="55%" text-anchor="middle"  >
+      <text id="myClock" x="35%+10" y="55%" text-anchor="middle"  >
         00:00
       </text>
 
@@ -55,6 +55,28 @@
         --
       </text>
     </rect>
+
+
+    <!-- <rect class="box">
+      <!-- steps -->
+      <image id="img_steps" x="25" y="180" href="img/run.jpg" height="48" width="48" />
+      <text id="stats_steps" x="40" y="200" text-anchor="middle" >
+        0000
+      </text>
+
+      <!-- hr -->
+      <image id="img_hr" x="25" y="220" href="img/hr_06.jpg" height="48" width="48" />
+      <text id="stats_hr" x="40" y="240" text-anchor="middle" >
+        --
+      </text>
+      
+      <!-- water -->
+      <image id="img_water" x="25" y="260" href="img/water.jpg" height="48" width="48" />
+      <text id="stats_water" x="40" y="280" text-anchor="middle" >
+        0,000 ml
+      </text>
+    </rect> -->
+
   </svg>
 
 

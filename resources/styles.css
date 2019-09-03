@@ -7,7 +7,7 @@
 #screen {
   width: 100%;
   height: 100%;
-  viewport-fill: black;
+  fill: black;
 }
 
 .box {
@@ -67,7 +67,6 @@
   font-family: SevilleSharp-Book;
   font-size: 27;
 }
-
 
 #stats_hr {
   fill: #DC143C;

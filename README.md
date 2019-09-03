@@ -26,7 +26,7 @@
 - [x] 목표 수 대비 얼마나 걸었는지를 Circle로 표시해주는 `sweepAngle`이 작동되지 않고 있다. 계속 찾아보는중..
   - `.gui` 에서는 `sweep-angle` 로 작성하고, `.js` 에서는 `sweepAngle` 로 작성해야만 작동.
 - [ ] 첫 날 테스트한 결과 배터리 소모가 심하다는 느낌을 받음. 완충하고 수면 이후 확인해보니 78%까지 배터리 소모. (평소는 95% 이상 유지)
-- [ ] 심박수 이미지 및 데이터에 깜빡거리는 애니메이션 효과 추가하고 싶음.
+- [ ] steps의 completion을 보여주는 circle이 깜빡거리면서 비중이 왔다갔다 하는 <a href="https://photos.app.goo.gl/CE9Ykvodc4uyW5YB7" target="_blank">에러</a> 발생중.
 
 <br>
 
@@ -45,3 +45,12 @@
 ### 2차 테스트
 
 <img src="https://lh3.googleusercontent.com/8f_bcHEOnXd_UNXDXbE3QSNz7gG_JyfRNRxX5NsWB794ufNOXuSQj1h7vNPUqUyrnSK8cgSBGdXP8gFyAsA1mZ559i0TA9YuFgQJb2rOzEpuvQ0oxmogh9bvRffPX9g5CTjphM3uPpXuEu6cS7nCPZRBXZOiibfW2MX9hVKvoX43apQ1oNtvVdXloz8oVuNbnCmDWtFqudNRhmbWUlhn8vOixnO0kjAvuVNqQk5OWEZ27PllUbjmhmO1_56coySgv4MpA7khk6spJ369zyMJPfz7V9eEaX8aoL8qdgcjjNa-zYxLz3H9yRxGKcXScWqo3MhKPLLj7pxzGDC7CnWq_bGFyVdEssolPHhsHLlrUa1QdSubt-pbQU_HxyRpZZy_dpVJg_eXSGqM1NPE3_rPDTbcRz7_KD0XVRBD35Tv3_GKP3_tR2Sp-Oz12GT4sjxFhMPY2o1WTedNSl676HXUKTS55Mbp1-W7wnKspCFD89VQYLNX-YfX1pR3yn06neV7hMhJrPtOCR3jDNlwQs_OVXTMrFiqMaBx3PmhK7-n3dhBeH9xjgbCj5ngciyVpMH0W4ddVS7BmgnR4jVe1-K-4MaDb5vTixQrQkGUYodzwUNdtHw8tPKa6CHGB4C4n77C5FhEC5M3ktXJLCgTzVadpOID-mnJcWFHRTwmcMVE4SFeZrKwIIVo508n=w1208-h906-no" width="500px"/>
+
+<br>
+
+## To-do
+
+- [ ] 심장이 뛰는듯한 애니메이션 효과 넣고싶음.
+- [ ] water log도 출력하고 싶음.
+
+<br>
