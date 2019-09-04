@@ -32,22 +32,13 @@
 
 ## 결과물
 
-### 1차 테스트
+<img src="resources/screenshots/Screen Shot 2019-09-04 at 11.21.17 PM.png" width="500px">
 
-<img align ="center" src="resources/app.gif" width="500px" />
+현재 Fitbit 스토어에 등록 신청하고 심사중.
 
-<p align="center">Simulator로 테스트한 화면</p>
-<img align ="center" src="https://lh3.googleusercontent.com/1RfWKZcQrc3oX8nVZAm8Cd1-2Jw1_MuL28Cv0uwvLweVzmLEfkODIRGNmEyfv0sprwG8qdms470syIIT4W3gayPb0gcuI1A4Zehx1SPTRQbzk6RNBUq-mDAHRS954bsNUaqGuCf9kG6VekxTb9434F3sLYmVM1uQF3dLQ615bq2AZvAE-i3wKB7p7OvuNRKx8jq-CohZhVbr7KXAFqfMiGSOypMWdkptAXdg11O_yFJ_S_GUSAaw2aLMBpljnj_9xLpj-_eIB-VQ-j6GC-QFg6i2lqG_d5lHQZV8MSBpTUfn8lQQtb5P48Jx3syicvXf_XNdhr4fQjACxC9KazuwYpdBXCfS30YvDS--eWXJv104BNbqE3JZCXOPXsmAuMyxuiW7lJvs2beK5E2n5Am4JKhKlyAVo05WlvoaLdz70OFH74_X4Tw368P6exSXB7FnvV_zT9cyXSwky-36r2FQSJIdd4o-Ov29l-X-pHx-TE23THnHiYct6-LzYArtE05oqdumVRsay_I5uD5TgD5x64iwJjgoJ_iMeDwY8LZN1SazUerEZjQXW1jXmuxh-tz690VvRxx_zxvdnc60Nogw0WSYrjhEJd9w3m2oefaWFu2B6tMRxtu6Uy9EgV_SiS36ZWwNUU87s1GLGJB2uVpHxbTqMf9BksdLQUBFrbz0tFnbrM9oQhPiJXiu=w2210-h1452-no" width="500px"/>
+아래 링크를 통해 바로 설치가능하다.
 
-<p align="center">실외에서 확인해본 디바이스 테스팅.</p>
-
-<br>
-
-### 2차 테스트
-
-<img align ="center" src="https://lh3.googleusercontent.com/mqvdEqWyJ-xBUidEduAACNncqpLTgEpMTPHKhFF40T3Tm1Eyhtz5sekyBAN-p6YFdJqCQInmGjqxc_oIM0Q5LN0ZkY87ZLkEAq2rqphEbweaXpr7k4CkeaT2NWXXPcH0NGLs3t8e2XQQA1_Bxfj_cieoBGDBI6btTw-S5qpFGTL7l5oEzjEininPkUt-0uOoWKyyWHwMBrDkTnbyo-02KItL48zpBkREeGOmaDBfUto5nEn_m36XC_--1nZJp4zSopciobZId0_uMITWEtvMzICU0sskcJKuRYJzw2ZP6QS2oYS2ry3aiRODv9Uv-54CFdkEdOBfwM57YmyMdj9TuULmcP6y2k8hUUmwh0nM4sGrJAOkSkER2oxFQJJQ2RWdh9zGrPxJKmtEhVY3CwEORZfBCFB1DUHn1wmGvBDGuK6zq-2Oe-KQ9GStt62fvw4nhh-WDnc4lB2d9qDu3DMaz4pQIrjGv2sVOQIsjTEiXKes3aIpCQ-C4pcNB4lzb7jskwfdF2Nd57Qpa4ppHCFEmYXfxoFHbXIDZFy9xVZpVZut4tGdPwGeVtyzufjtWZEdVrPDkSnXwWafjm1KKU8DzB0cWmEXr9aAxRf98F8W-pfXGgSlPUS0yE23NT9QXP21DPJt8eev80mz_0xGThO7Q_9XOWuA-YsW0V2kQOUTmTP7DvOt3yX29Gwx=w1936-h1452-no" width="500px"/>
-
-<p align ="center">sweep-angle 문제를 처리하여 goal completion을 보여주고 있는 모습.</p>
+https://gallery.fitbit.com/details/e44ef4c9-d300-4ec2-93e6-8cbc589c986d
 
 <br>
 
@@ -55,5 +46,6 @@
 
 - [ ] 심장이 뛰는듯한 애니메이션 효과 넣고싶음.
 - [ ] water log도 출력하고 싶음.
+- [ ] Setting API 사용해서 언어설정하면 한글로도 출력되도록 하고싶음.
 
 <br>

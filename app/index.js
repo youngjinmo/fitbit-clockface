@@ -1,6 +1,5 @@
 import document from "document";
 import clock from "clock";
-import { preferences } from "user-settings";
 import { today, goals } from "user-activity";
 import { HeartRateSensor } from "heart-rate";
 
@@ -115,8 +114,8 @@ clock.ontick = (evt) => {
 
 
     // Activity - steps
-    let today_steps = today.local.steps || 0;
-    let today_goals = (goals.steps) || 0;
+    let today_steps = today.local.steps;
+    let today_goals = goals.steps;
 
     steps.text = today_steps;  // steps 출력
     
