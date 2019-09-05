@@ -4,7 +4,7 @@
 
 ## 목표
 
-<img src="resources/screenshots/draft.png" width="450px" alt="원래 기획했던 클락 페이스 이미지"/>
+<img src="resources/screenshots/draft.PNG" width="450px" />
 
 <p align="center"> 원래 기획한 Fitbit Clock Face </p>
 필요한 최소한의 데이터를 출력하는 간단한 클락 페이스를 만들어보자.
