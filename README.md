@@ -4,7 +4,7 @@
 
 ## 목표
 
-<img src="resources/DevAndy-Clock-Face.001.PNG" width="450px" alt="원래 기획했던 클락 페이스 이미지"/>
+<img src="resources/screenshots/draft.png" width="450px" alt="원래 기획했던 클락 페이스 이미지"/>
 
 <p align="center"> 원래 기획한 Fitbit Clock Face </p>
 필요한 최소한의 데이터를 출력하는 간단한 클락 페이스를 만들어보자.
@@ -32,7 +32,7 @@
 
 ## 결과물
 
-<img src="resources/screenshots/Screen Shot 2019-09-04 at 11.21.17 PM.png" width="500px">
+<img src="resources/screenshots/final.png" width="500px">
 
 현재 Fitbit 스토어에 등록 신청하고 심사중.
 
