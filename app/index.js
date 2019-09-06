@@ -121,10 +121,11 @@ clock.ontick = (evt) => {
     
     function activity_steps() {
         let goalCompletion = today_steps / today_goals;
-        let angle = 360 * goalCompletion;
-        arc.sweepAngle = angle;
+       // let angle = 360 * goalCompletion;
+        arc.sweepAngle = 360 * goalCompletion;
     }
-    setInterval(activity_steps, 3000);
+    activity_steps();
+    // setInterval(activity_steps, 3000);
 
 
     if(HeartRateSensor) {
