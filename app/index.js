@@ -15,15 +15,8 @@ let arc = document.getElementById("arc-fore");
 let arc_back = document.getElementById("arc-back");
 let steps = document.getElementById("stats_steps");
 let hr = document.getElementById("stats_hr");
-let hrimg = document.getElementById("hrimg");
 
 let congrats = document.getElementById("congrats");
-// let goal_01 = document.getElementById("goal_completed_01");
-// let goal_02 = document.getElementById("goal_completed_02");
-// let goal_03 = document.getElementById("goal_completed_03");
-// let goal_04 = document.getElementById("goal_completed_04");
-// let goal_05 = document.getElementById("goal_completed_05");
-// let goal_06 = document.getElementById("goal_completed_06");
 
 
 // utils
@@ -120,11 +113,7 @@ clock.ontick = (evt) => {
     }
 
     // myClock
-    if(hours<10){
-        myClock.text = `0${hours}:${minutes}`;
-    } else {
-        myClock.text = `${hours}:${minutes}`;
-    }
+    myClock.text = `${hours}:${minutes}`;
     myClock_seconds.text = `:${seconds}`;
 
 
@@ -132,8 +121,7 @@ clock.ontick = (evt) => {
     let today_steps = today.local.steps;
     let today_goals = goals.steps;
 
-    // show steps in accounting
-    steps.text = Math.floor(today_steps/1000)+','+(today_steps-(Math.floor(today_steps/1000)*1000));
+    steps.text = today_steps;
 
     function activity_steps() {
         let goalCompletion = today_steps / today_goals;
