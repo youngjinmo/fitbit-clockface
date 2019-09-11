@@ -133,7 +133,7 @@ clock.ontick = (evt) => {
     let today_goals = goals.steps;
 
     // show steps in accounting
-    steps.text = Math.floor(today_steps/1000)+','+today_steps%1000;
+    steps.text = Math.floor(today_steps/1000)+','+(today_steps-(Math.floor(today_steps/1000)*1000));
 
     function activity_steps() {
         let goalCompletion = today_steps / today_goals;
