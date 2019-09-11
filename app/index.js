@@ -119,7 +119,12 @@ clock.ontick = (evt) => {
         }
     }
 
-    myClock.text = `${hours}:${minutes}`;
+    // myClock
+    if(hours<10){
+        myClock.text = `0${hours}:${minutes}`;
+    } else {
+        myClock.text = `${hours}:${minutes}`;
+    }
     myClock_seconds.text = `:${seconds}`;
 
 
