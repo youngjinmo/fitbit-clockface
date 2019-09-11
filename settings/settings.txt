@@ -1,0 +1,28 @@
+function settingsComponent(props) {
+  return (
+    <Page>
+      <Section
+        title={
+          <Text bold align="center">
+            App Settings
+          </Text>
+        }
+
+      <ColorSelect
+      	settingsKey="date"
+      	options={[
+      		{
+      			{color : 'tomato'},
+      			{color : 'sandybrown'},
+      			{color : 'aquamarine'},
+      			{color : 'deepskyblue'},
+      			{color : 'plum'}
+      		}
+      	]}
+      />
+     </Section>
+    </Page>
+  );
+}
+
+registerSettingsPage(settingsComponent);
