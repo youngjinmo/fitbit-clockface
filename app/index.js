@@ -12,8 +12,17 @@ let ampm = document.getElementById("ampm");
 let myClock_seconds = document.getElementById("seconds");
 
 let arc = document.getElementById("arc-fore");
+let arc_back = document.getElementById("arc-back");
 let steps = document.getElementById("stats_steps");
 let hr = document.getElementById("stats_hr");
+
+let congrats = document.getElementById("congrats");
+// let goal_01 = document.getElementById("goal_completed_01");
+// let goal_02 = document.getElementById("goal_completed_02");
+// let goal_03 = document.getElementById("goal_completed_03");
+// let goal_04 = document.getElementById("goal_completed_04");
+// let goal_05 = document.getElementById("goal_completed_05");
+// let goal_06 = document.getElementById("goal_completed_06");
 
 
 // utils
@@ -84,7 +93,7 @@ day_txt.text = `${day}`;
 
 clock.granularity = "seconds";
 clock.ontick = (evt) => {
-    
+
     let hours = evt.date.getHours();
     let minutes = evt.date.getMinutes();
     let seconds = evt.date.getSeconds();
@@ -108,7 +117,7 @@ clock.ontick = (evt) => {
             hours = hours - 12;
         }
     }
- 
+
     myClock.text = `${hours}:${minutes}`;
     myClock_seconds.text = `:${seconds}`;
 
@@ -117,15 +126,51 @@ clock.ontick = (evt) => {
     let today_steps = today.local.steps;
     let today_goals = goals.steps;
 
-    steps.text = today_steps;  // steps 출력
-    
+    // show steps in accounting
+    steps.text = Math.floor(today_steps/1000)+','+today_steps%1000;
+
     function activity_steps() {
         let goalCompletion = today_steps / today_goals;
        // let angle = 360 * goalCompletion;
         arc.sweepAngle = 360 * goalCompletion;
+
+       // if user completed daily goal
+       if(today_steps>today_goals){
+           arc.sweepAngle = 0;
+           arc_back.sweepAngle = 0;
+
+           congrats.width = 55;
+           congrats.height = 55;
+
+           steps.y = 275;
+       }
+
+        // if user completed daily goal, change circle.
+        // if (today_steps>today_goals) {
+        //     arc.sweepAngle = 0;
+        //     arc_back.sweepAngle = 0;
+            
+        //     goal_01.startAngle = 0;
+        //     goal_01.sweepAngle = 60;
+
+        //     goal_02.startAngle = 61;
+        //     goal_02.sweepAngle = 120;
+
+        //     goal_03.startAngle = 121;
+        //     goal_03.sweepAngle = 180;
+
+        //     goal_04.startAngle = 181;
+        //     goal_04.sweepAngle = 240;
+
+        //     goal_05.startAngle = 241;
+        //     goal_05.sweepAngle = 300;
+
+        //     goal_06.startAngle = 301;
+        //     goal_06.sweepAngle = 360;
+
+        // }
     }
     activity_steps();
-    // setInterval(activity_steps, 3000);
 
 
     if(HeartRateSensor) {
@@ -139,10 +184,9 @@ clock.ontick = (evt) => {
     } else {
     	console.log("This device has a no HR sensor");
     }
-    
+
 
     // console.log(evt.date.toString());
     // console.log(hours+":"+minutes+":"+seconds);
 
 }
-
