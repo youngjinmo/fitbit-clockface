@@ -15,6 +15,7 @@ let arc = document.getElementById("arc-fore");
 let arc_back = document.getElementById("arc-back");
 let steps = document.getElementById("stats_steps");
 let hr = document.getElementById("stats_hr");
+let hrimg = document.getElementById("hrimg");
 
 let congrats = document.getElementById("congrats");
 // let goal_01 = document.getElementById("goal_completed_01");
@@ -144,37 +145,11 @@ clock.ontick = (evt) => {
 
            steps.y = 275;
        }
-
-        // if user completed daily goal, change circle.
-        // if (today_steps>today_goals) {
-        //     arc.sweepAngle = 0;
-        //     arc_back.sweepAngle = 0;
-            
-        //     goal_01.startAngle = 0;
-        //     goal_01.sweepAngle = 60;
-
-        //     goal_02.startAngle = 61;
-        //     goal_02.sweepAngle = 120;
-
-        //     goal_03.startAngle = 121;
-        //     goal_03.sweepAngle = 180;
-
-        //     goal_04.startAngle = 181;
-        //     goal_04.sweepAngle = 240;
-
-        //     goal_05.startAngle = 241;
-        //     goal_05.sweepAngle = 300;
-
-        //     goal_06.startAngle = 301;
-        //     goal_06.sweepAngle = 360;
-
-        // }
     }
     activity_steps();
 
 
     if(HeartRateSensor) {
-        // console.log("This device has a HR sensor");
         const hrm = new HeartRateSensor();
         hrm.addEventListener("reading", () => {
             // console.log(`current heart-rate: ${hrm.heartRate}`);
@@ -185,8 +160,5 @@ clock.ontick = (evt) => {
     	console.log("This device has a no HR sensor");
     }
 
-
-    // console.log(evt.date.toString());
-    // console.log(hours+":"+minutes+":"+seconds);
 
 }
