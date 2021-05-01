@@ -1,12 +1,8 @@
-# Build a Fitbit Clock Face
-
-
+# Fitbit Clock Face
 
 ## 기획
 
 <img src="resources/screenshots/draft.PNG" width="450px" />
-
-원래 기획한 Fitbit Clock Face
 
 필요한 최소한의 데이터를 출력하는 간단한 클락 페이스를 만들어보자.
 
@@ -49,9 +45,9 @@
 
   - ```javascript
     if(hours<10){
-      myClock.text = `0${hours}:${minutes}`;
+        myClock.text = `0${hours}:${minutes}`;
     } else {
-      myClock.text = `${hours}:${minutes}`;
+        myClock.text = `${hours}:${minutes}`;
     }
     myClock_seconds.text = `:${seconds}`;
     ```
@@ -60,22 +56,13 @@
 
 ## 결과물
 
-<img src="resources/screenshots/final.png" width="500px">
-
-현재 Fitbit 스토어에 등록 신청하고 심사중.
+![](resources/screenshots/fitbit.JPG)
 
 아래 링크를 통해 바로 설치가능하다.
 
 https://gallery.fitbit.com/details/e44ef4c9-d300-4ec2-93e6-8cbc589c986d
 
-<br>
-
-## To-do
-
-- [x] <strike>목표달성하면 효과를 넣고 싶음.</strike>
-  - 목표수 달성하면 circle 사라지고, 🎉 이미지 출력.
-- [ ] 심장이 뛰는듯한 애니메이션 효과 넣고싶음.
-- [ ] water log도 출력하고 싶음.
-- [ ] Setting API 사용해서 언어설정하면 한글로도 출력되도록 하고싶음.
+<img src="resources/screenshots/final.png" width="500px">
 
 <br>
+
